@@ -63,8 +63,12 @@ class DemoController extends Controller
     //     return "Hello4"; 
     // }
 
-    function DemoAction(Request $request):array{
-        return $request->header();
+    // function DemoAction(Request $request):array{
+    //     return $request->header();
 
+    // }
+
+    function DemoAction(Request $request):string{
+        return "Hello";
     }
 }

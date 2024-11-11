@@ -39,4 +39,6 @@ use App\Http\Controllers\DemoController;
 // Route::get("/hello4/{key}",[DemoController::class,'DemoAction4']);
 
 
-Route::get("/hello", [DemoController::class,'DemoAction'])->middleware([DemoMiddleware::class]);
+// Route::get("/hello", [DemoController::class,'DemoAction'])->middleware([DemoMiddleware::class]);
+
+Route::get("/hello", [DemoController::class,'DemoAction'])->middleware('throttle:5,1');
