@@ -51,4 +51,12 @@ class DemoController extends Controller
     function DemoAction2():string{
         return "Hello2"; 
     }
+
+    function DemoAction3():string{
+        return "Hello3"; 
+    }
+
+    function DemoAction4():string{
+        return "Hello4"; 
+    }
 }

@@ -25,7 +25,7 @@ class DemoMiddleware
         return $next($request);
     }
     else{
-        return redirect("/hello2");
+        return response()->json(['message' => 'Unauthorized'], 401);
     }
 }
     
