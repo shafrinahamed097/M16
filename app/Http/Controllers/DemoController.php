@@ -8,40 +8,44 @@ use Illuminate\Http\Request;
 
 class DemoController extends Controller
 {
-    function SessionPut(Request $request):bool{
-        $email=$request->email;
-        $request->session()->put('userEmail', $email);
+    // function SessionPut(Request $request):bool{
+    //     $email=$request->email;
+    //     $request->session()->put('userEmail', $email);
         
        
-        return true;
-    }
+    //     return true;
+    // }
 
-    function SessionPull(Request $request):string{
+    // function SessionPull(Request $request):string{
         
        
         
        
-        return  $request->session()->pull('userEmail','default');
-    }
+    //     return  $request->session()->pull('userEmail','default');
+    // }
     
-    function SessionGet(Request $request):string{
+    // function SessionGet(Request $request):string{
         
        
-        return  $request->session()->get('userEmail','default');
-    }
-    function SessionForget(Request $request):bool{
+    //     return  $request->session()->get('userEmail','default');
+    // }
+    // function SessionForget(Request $request):bool{
         
        
-        $request->session()->forget('userEmail');
+    //     $request->session()->forget('userEmail');
        
-        return true;
-    }
+    //     return true;
+    // }
 
-    function SessionFlush(Request $request):bool{
+    // function SessionFlush(Request $request):bool{
         
        
-        $request->session()->flush();
+    //     $request->session()->flush();
        
-        return true;
+    //     return true;
+    // }
+
+    function DemoAction():string{
+        return "Hello"; 
     }
 }

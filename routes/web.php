@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DemoController;
+use App\Http\Middleware\DemoMiddleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,13 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
-Route::get('/SessionPut/{email}',[DemoController::class,'SessionPut']);
-Route::get('/SessionPull',[DemoController::class,'SessionPull']);
-Route::get('/SessionGet',[DemoController::class,'SessionGet']);
-Route::get('/SessionForget',[DemoController::class,'SessionForget']);
-Route::get('/SessionFlush',[DemoController::class,'SessionFlush']);
+// Route::get('/SessionPut/{email}',[DemoController::class,'SessionPut']);
+// Route::get('/SessionPull',[DemoController::class,'SessionPull']);
+// Route::get('/SessionGet',[DemoController::class,'SessionGet']);
+// Route::get('/SessionForget',[DemoController::class,'SessionForget']);
+// Route::get('/SessionFlush',[DemoController::class,'SessionFlush']);
+
+
+
+
+Route::get('/hello',[DemoController::class,'DemoAction'])->middleware([DemoMiddleware::class]);
