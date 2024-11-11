@@ -18,4 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/DemoAction/{num1}/{num2}',[DemoController::class,'DemoAction']);
+
+Route::get('/SessionPut/{email}',[DemoController::class,'SessionPut']);
+Route::get('/SessionPull',[DemoController::class,'SessionPull']);
+Route::get('/SessionGet',[DemoController::class,'SessionGet']);
+Route::get('/SessionForget',[DemoController::class,'SessionForget']);
+Route::get('/SessionFlush',[DemoController::class,'SessionFlush']);
