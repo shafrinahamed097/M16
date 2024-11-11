@@ -45,7 +45,10 @@ class DemoController extends Controller
     //     return true;
     // }
 
-    function DemoAction():string{
-        return "Hello"; 
+    function DemoAction1():string{
+        return "Hello1"; 
+    }
+    function DemoAction2():string{
+        return "Hello2"; 
     }
 }

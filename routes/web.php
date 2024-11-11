@@ -29,4 +29,5 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/hello',[DemoController::class,'DemoAction'])->middleware([DemoMiddleware::class]);
+Route::get('/hello1/{key}',[DemoController::class,'DemoAction1'])->middleware([DemoMiddleware::class]);
+Route::get('/hello2',[DemoController::class,'DemoAction2']);
