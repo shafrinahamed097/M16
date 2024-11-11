@@ -16,17 +16,11 @@ class DemoMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         
-    $key =  $request->key;
-    if($key == 'XYZ123'){
-
-    
-
-        // No Condition
-        return $next($request);
-    }
-    else{
-        return response()->json(['message' => 'Unauthorized'], 401);
+    //  $request->headers->add(['email' => '8PdP6@example.com']);   
+    //  $request->headers->replace(['email' => '8PdP6@example.com']);   
+     $request->headers->remove('email');   
+     return $next($request);
     }
 }
     
-}
+
