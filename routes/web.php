@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DemoControllerr;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Middleware\DemoMiddleware;
@@ -42,3 +43,5 @@ use App\Http\Controllers\DemoController;
 // Route::get("/hello", [DemoController::class,'DemoAction'])->middleware([DemoMiddleware::class]);
 
 Route::get("/hello", [DemoController::class,'DemoAction'])->middleware('throttle:5,1');
+
+Route::get("/hello2", [DemoControllerr::class,'DemoAction']);
