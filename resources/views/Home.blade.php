@@ -1,1 +1,2 @@
-<h1>This is Home Page</h1>
+
+<h2>{{$result}}</h2>
