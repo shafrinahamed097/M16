@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DemoControllerr;
+use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Middleware\DemoMiddleware;
@@ -45,3 +46,5 @@ use App\Http\Controllers\DemoController;
 Route::get("/hello", [DemoController::class,'DemoAction'])->middleware('throttle:5,1');
 
 Route::get("/hello2", [DemoControllerr::class,'DemoAction']);
+
+Route::get("/singleController", VideoController::class);
