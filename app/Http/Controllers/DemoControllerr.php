@@ -6,7 +6,15 @@ use Illuminate\Http\Request;
 
 class DemoControllerr extends Controller
 {
-    function DemoAction(Request $request){
-        return "Hello";
+   
+    
+
+    function __construct()
+    {
+       $this->middleware('demo');
+    }
+
+    function DemoAction(Request $request):array{
+        return $request->header();
     }
 }
