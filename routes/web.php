@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\DemoMiddleware;
 use App\Http\Controllers\DemoController;
@@ -66,3 +67,5 @@ Route::resource('/photos', PhotoController::class);
 
 
 */
+
+Route::get("/home", [HomeController::class, 'page']);
