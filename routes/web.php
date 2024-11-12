@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\DemoControllerr;
-use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Middleware\DemoMiddleware;
 use App\Http\Controllers\DemoController;
+
+use App\Http\Controllers\DemoControllerr;
+use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\VideoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,3 +49,20 @@ Route::get("/hello", [DemoController::class,'DemoAction'])->middleware('throttle
 Route::get("/hello2", [DemoControllerr::class,'DemoAction']);
 
 Route::get("/singleController", VideoController::class);
+
+
+Route::resource('/photos', PhotoController::class);
+
+/*
+
+  GET()  INDEX http://127.0.0.1:8000/photos
+  GET()  CREATE http://127.0.0.1:8000/photos/create
+  POST() STORE http://127.0.0.1:8000/photos
+  GET()  SHOW http://127.0.0.1:8000/photos/1
+  GET()  EDIT http://127.0.0.1:8000/photos/1/edit
+  PUT/PATCH()  UPDATE http://127.0.0.1:8000/photos/1
+  DELETE()  DESTROY http://127.0.0.1:8000/photos/1
+
+
+
+*/
