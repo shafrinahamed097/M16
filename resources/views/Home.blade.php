@@ -1,4 +1,5 @@
-@include('components.Header')
-@include('components.Hero')
-@include('components.Team')
-@include('components.Footer')
+@extends('Layout.app');
+
+@section('content')
+   <h1>This is my Content</h1>
+@endsection
