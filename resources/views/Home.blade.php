@@ -1,39 +1,30 @@
-<!-- @if($result === 100)
-  <h1>Result is hundred</h1>
-@elseif($result === 1000)
-   <h1>Result Thousand</h1>
-   @elseif($result === 10000)
-   <h1>Result Ten Thousand</h1>
-   @else
-     <h1>Result is not in our range</h1>
-     @endif -->
 
 
-     <!-- @switch($result)
 
-       @case(100)
-        <h1>Result is hundred</h1>
-        @break
-
-        @case(1000)
-        <h1>Result Thousand</h1>
-        @break
-
-        @case(10000)
-        <h1>Result Ten Thousand</h1>
-        @default
-        <h1>Result is not in our range</h1>
-
-
-     @endswitch -->
-
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Laravel App</title>
+      <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}"  rel="stylesheet" type="text/css">
+     </head>
      <body>
-     <ul>
-        @for($i=1; $i<=15; $i++)
-           <li>{{$i}}</li>
-        
-        @endfor
 
-        </ul>
+     <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-6">
+          <button class="btn btn-success">Hello</button>
+          <img src="{{asset('images/laravel.jpeg')}}" alt="Logo">
 
+        </div>
+      </div>
+
+     </div>
+      
+
+
+     <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
      </body>
+     </html>
+

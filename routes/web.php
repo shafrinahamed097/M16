@@ -70,3 +70,7 @@ Route::resource('/photos', PhotoController::class);
 
 // Route::get("/home/{num1}/{num2}", [HomeController::class, 'page']);
 Route::get("/home", [HomeController::class, 'page']);
+
+Route::get('/', function () {
+  return view('Home');
+});
