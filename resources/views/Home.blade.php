@@ -1,5 +1,9 @@
 @extends('Layout.app');
 
 @section('content')
-   <h1>This is my Content</h1>
+   @include('Component.hero')
+   @include('Component.howWeDo')
+   @include('Component.pricing')
+   @include('Component.team')
+   @include('Component.newslatter')
 @endsection
