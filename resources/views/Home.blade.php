@@ -9,7 +9,7 @@
      @endif -->
 
 
-     @switch($result)
+     <!-- @switch($result)
 
        @case(100)
         <h1>Result is hundred</h1>
@@ -25,4 +25,15 @@
         <h1>Result is not in our range</h1>
 
 
-     @endswitch
+     @endswitch -->
+
+     <body>
+     <ul>
+        @for($i=1; $i<=15; $i++)
+           <li>{{$i}}</li>
+        
+        @endfor
+
+        </ul>
+
+     </body>
